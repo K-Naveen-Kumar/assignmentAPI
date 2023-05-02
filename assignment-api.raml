@@ -1,0 +1,58 @@
+#%RAML 1.0
+title: Assignment API
+
+/user:
+  post:
+    body:
+      application/json:
+        example: 
+           {
+            "email" : "test@rmail.com" ,
+            "firstName" : "jack",
+            "lastName" : "macko"
+            }
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+              “Success” : "true",
+              “salesforceId”: "salesforce object id should be returned"
+               }
+      404:
+        body:
+          application/json:
+            example:
+              {
+              “Success” : "false",
+              “Message” : "Nopassenger",
+               first name: "<< from request>>",
+               Last name : "<< from request>>", 
+               email: "<<from request>>"
+              }
+      400:
+        body:
+          application/json:
+            example:
+              {
+              “Success” : "false| true",   
+              “Message” : "respective message"
+              }
+      500:
+        body:
+          application/json:
+            example:
+              {
+              “Success” : "false| true",   
+              “Message” : "respective message"
+              }
+
+            
+        
+
+
+      
+        
+
+        
